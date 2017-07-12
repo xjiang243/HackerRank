@@ -1,0 +1,28 @@
+git init  //init respos
+
+git status  //check staus
+
+git add .  //add file to stage
+
+git commit -m "sth"  //commit files
+
+git rm file_name //Removes files from your index and your working directory 
+
+git branch  //check all branches created
+
+git checkout -b name_of_your_new_branch  //create the branch on your local machine
+
+git checkout name_of_branch  //change working branch
+
+git branch -d name_of_branch  //delete a branch
+
+git merge newbranchversion  //merge into your current branch
+
+git pull  //Fetch files from the remote repos
+
+git log  //show a list of commits on a branch including the corresponding details
+
+
+
+
+
