@@ -1,0 +1,27 @@
+o(n) time complexity and o(1) space complexity
+function firstDuplicate(a) {
+    
+    for(var i=0; i < a.length; i++){
+        if(a[Math.abs(a[i])-1] >= 0){
+            a[Math.abs(a[i])-1] = -a[Math.abs(a[i])-1];
+        }else{
+            return Math.abs(a[i]);
+        }
+    }
+    return -1;
+}
+
+
+Use set
+function firstDuplicate(a) {
+    
+    var mySet = new Set();
+    for(var i=0; i < a.length; i++){
+        if(mySet.has(a[i])){
+            return a[i];
+        }else{
+            mySet.add(a[i]);
+        }
+    }
+    return -1;
+}
