@@ -1,0 +1,45 @@
+function rotateImage(a) {
+    
+    var tmp = 0;
+    for(var i = 0; i < a.length; i++){
+        for(var j = 0; j < a.length; j++){
+            if(i<j){
+            tmp = a[i][j];
+            a[i][j] = a[j][i];
+            a[j][i] = tmp;
+            }
+        }
+    }
+    
+    console.log(a);
+    
+    for(var i = 0; i < a.length; i++){
+     for(var j = 0; j < a.length/2; j++){
+         tmp = a[i][j];
+         a[i][j] = a[i][a.length-1-j];
+         a[i][a.length-1-j] = tmp;
+     }
+    }
+    return a;
+}
+
+
+function rotateImage(a) {
+    // Transpose
+    for(var i = 0;i<a.length;i++){
+        for(var j = 0;j<i;j++){
+            // Switch a[i][j] and a[j][i] 
+            // With XOR swap
+            a[i][j] ^= a[j][i]
+            a[j][i] ^= a[i][j]
+            a[i][j] ^= a[j][i]
+         }
+    }
+    
+    // Reverse columns
+    for(var i in a){
+        a[i] = a[i].reverse()
+    }
+    
+    return a
+}
